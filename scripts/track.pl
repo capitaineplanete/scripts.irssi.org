@@ -3,7 +3,7 @@ use warnings; use strict;
 use File::Glob qw/:bsd_glob/;
 use vars qw($VERSION %IRSSI);
 
-my $quiet     = 0;
+my $quiet     = 1;
 my $dupcount  = 0;
 $VERSION      = "2.2";
 

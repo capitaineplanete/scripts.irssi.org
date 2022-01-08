@@ -97,17 +97,19 @@ if (!$windowname)
 {
   Irssi::command("window new hidden");
   Irssi::command("window name highlite");
+  Irssi::command("window move 1");
+  Irssi::command("window goto (status)");
 }
 
 Irssi::signal_add(
 {
-  'message join' => \&msg_join,
-  'message part' => \&msg_part,
-  'message quit' => \&msg_quit,
+  # 'message join' => \&msg_join,
+  # 'message part' => \&msg_part,
+  # 'message quit' => \&msg_quit,
   'message topic' => \&msg_topic,
   'print text', 'sig_printtext',
-  'message nick' => \&msg_nick,
-  'message kick' => \&msg_kick
+  # 'message nick' => \&msg_nick,
+  # 'message kick' => \&msg_kick
 }
 );
 

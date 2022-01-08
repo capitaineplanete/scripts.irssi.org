@@ -56,12 +56,10 @@ sub rotate_dict() {
   Irssi::print($IRSSI{'name'} . ": dictionary language: " . $langs[0]);
 }
 
-
 Irssi::signal_add_last 'complete word' => sub {
   my ($complist, $window, $word, $linestart, $want_space) = @_;
   push(@$complist, grep { defined } $speller->suggest( $word )); # eliminate null pointers
 };
-
 
 Irssi::signal_add_last 'setup changed' => sub {
   if ($setting_spell_dict ne Irssi::settings_get_str("spell_dict") ||
@@ -75,7 +73,6 @@ Irssi::signal_add_last 'setup changed' => sub {
 ####
 # Register commands
 Irssi::command_bind('rotate_dict', 'rotate_dict');
-
 
 ###
 # Settings

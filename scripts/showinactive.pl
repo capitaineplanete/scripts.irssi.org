@@ -89,7 +89,7 @@ sub sig_query_created() {
 	my $refnum = $query->window()->{refnum};
 	if ($auto) {
 		print_inactive("Query started with ".$query->{name}." in window $refnum", $query->window());
-		$query->{server}->command("whois ".$query->{name});
+		# $query->{server}->command("whois ".$query->{name});
 	}
 }
 
