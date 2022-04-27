@@ -51,7 +51,7 @@ use Irssi;
 my $irssi_mumbo = qr/\cD[`-i]|\cD[&-@\xff]./;
 
 my $nickchar = qr/[\]\[[:alnum:]\\|`^{}_-]/;
-my $nick_pat = qr/($nickchar+)/;
+my $nick_pat = qr/(?i)($nickchar+)/;
 
 my @ignore_list;
 
